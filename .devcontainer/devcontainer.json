@@ -1,22 +1,34 @@
 {
-  "name": "TreeTangler",
-  "image": "mcr.microsoft.com/devcontainers/javascript-node:18",
+  "name": "TreeTangler - Interactive Phylogenetic Visualization",
+  "image": "mcr.microsoft.com/devcontainers/javascript-node:1-18-bullseye",
+  
+  "features": {
+    "ghcr.io/devcontainers/features/node:1": {
+      "version": "18"
+    }
+  },
   
   "forwardPorts": [8000],
   "portsAttributes": {
-    "PORT_NUMBER": {
-      "label": "TreeTangler",
+    "8000": {
+      "label": "TreeTangler Application",
       "onAutoForward": "openBrowser"
     }
   },
   
-  "postCreateCommand": "npm install && npm run build",
+  "postCreateCommand": "npm install",
   
   "customizations": {
     "vscode": {
       "extensions": [
-        "dbaeumer.vscode-eslint"
-      ]
+        "dbaeumer.vscode-eslint",
+        "esbenp.prettier-vscode"
+      ],
+      "settings": {
+        "terminal.integrated.defaultProfile.linux": "bash"
+      }
     }
-  }
+  },
+  
+  "remoteUser": "node"
 }

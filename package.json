@@ -11,7 +11,7 @@
     "cophy-treetools": "git+https://github.com/meekrob/cophy-treetools.git",
     "cors": "^2.8.5",
     "d3": "^5.8.2",
-    "esdoc": "^1.1.0",
+    "esdoc": "^0.4.8",
     "esdoc-standard-plugin": "^1.0.0",
     "express": "^4.16.4",
     "jquery": "^3.3.1",
@@ -24,12 +24,14 @@
     "chai": "^4.2.0",
     "grunt": "^1.0.3",
     "grunt-browserify": "^5.3.0",
-    "grunt-contrib-jshint": "^1.1.0",
+    "grunt-contrib-jshint": "^3.2.0",
     "text-diff": "^1.0.1"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "./run_server"
+    "start": "./run_server",
+    "build": "npx grunt browserify",
+    "postinstall": "npm run build"
   },
   "repository": {
     "type": "git",
