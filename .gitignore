@@ -7,3 +7,5 @@ npm-debug.log
 .DS_Store
 *.swp
 *.swo
+public/js/test-modal.js
+public/js/test-contrast.js
