@@ -17,13 +17,11 @@ module.exports = function(grunt) { // grunt instance is passed to this function 
                 src: ["app-client.js"],
                 dest: "public/js/bundle.js"
             },
-            modal: {
-                src: ["app-test-modal.js"],
-                dest: "public/js/test-modal.js"
-            },
-            test_contrast: {
-                src: ["app-test-contrast.js"],
-                dest: "public/js/test-contrast.js"
+            tests: {
+                files: {
+                "app-test-modal.js": ["public/js/test-modal.js"],
+                "app-test-contrast.js": ["public/js/test-contrast.js"]
+                }
             }
         }
     });
@@ -32,7 +30,8 @@ module.exports = function(grunt) { // grunt instance is passed to this function 
     grunt.loadNpmTasks("grunt-browserify");
 
 
-    grunt.registerTask("js", ["browserify"]);
+    grunt.registerTask("js", ["browserify:client"]);
+    grunt.registerTask("test-manual", ["browserify:tests"]);
     grunt.registerTask("default", ["jshint", "js"]);
 
     
