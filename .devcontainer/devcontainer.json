@@ -1,0 +1,22 @@
+{
+  "name": "TreeTangler",
+  "image": "mcr.microsoft.com/devcontainers/javascript-node:18",
+  
+  "forwardPorts": [8000],
+  "portsAttributes": {
+    "PORT_NUMBER": {
+      "label": "TreeTangler",
+      "onAutoForward": "openBrowser"
+    }
+  },
+  
+  "postCreateCommand": "npm install && npm run build",
+  
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "dbaeumer.vscode-eslint"
+      ]
+    }
+  }
+}
