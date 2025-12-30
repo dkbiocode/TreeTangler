@@ -17,6 +17,7 @@
   },
   
   "postCreateCommand": "npm install && grunt",
+  "postStartCommand": "npm start",
   
   "customizations": {
     "vscode": {
@@ -25,8 +26,14 @@
         "esbenp.prettier-vscode"
       ],
       "settings": {
-        "terminal.integrated.defaultProfile.linux": "bash"
+        "terminal.integrated.defaultProfile.linux": "bash",
+        "workbench.startupEditor": "none"
       }
+    },
+    "codespaces": {
+      "openFiles": [
+        "CODESPACE_README.md"
+      ]
     }
   },
   
