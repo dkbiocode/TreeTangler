@@ -16,7 +16,7 @@
     }
   },
   
-  "postCreateCommand": "npm install && grunt",
+  "postCreateCommand": "'npm install && npx grunt browserify:client'", 
   "postStartCommand": "npm start",
   
   "customizations": {

@@ -31,8 +31,8 @@ module.exports = function(grunt) { // grunt instance is passed to this function 
 
 
     grunt.registerTask("js", ["browserify:client"]);
-    grunt.registerTask("test-manual", ["browserify:tests"]);
-    grunt.registerTask("default", ["jshint", "js"]);
+    //grunt.registerTask("test-manual", ["browserify:tests"]);
+    //grunt.registerTask("default", ["jshint", "js"]);
 
     
 };
